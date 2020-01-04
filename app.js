@@ -23,4 +23,4 @@ app.use((req, res, next) => {
 const subscribersRouter = require('./routes/projects')
 app.use('/projects', subscribersRouter)
 
-app.listen(3001, () => console.log('Server Started'))
+app.listen(process.env.port || 3001, () => console.log('Server Started'))
